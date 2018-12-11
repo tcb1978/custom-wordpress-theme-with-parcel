@@ -1,0 +1,8 @@
+@import './reset/reset.scss';
+@import './config/config.scss';
+
+body {
+  .main {
+    background-color: $button;
+  }
+}

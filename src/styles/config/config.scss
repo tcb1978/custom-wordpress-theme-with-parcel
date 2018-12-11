@@ -1,0 +1,39 @@
+/*colors*/
+$border: rgb(241,91,76);
+$button: rgb(241,91,76);
+$feature: rgb(241,91,76);
+$grey: rgb(153,149,150);
+$header: rgb(35,31,32);
+$hover: rgb(241,91,76);
+$light-grey: rgb(249,249,249);
+$paragraph: rgb(35,31,32);
+$white: #fff;
+
+/*breakpoints*/
+$tablet: 70em;
+$desktop: 50em;
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+ }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+ }
+   @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
+ }
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+ }
+ @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+
+ }
+}
+/*mixins*/
+
+/*font element mixins*/
+@mixin antialiasing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
